@@ -1,37 +1,16 @@
-require_relative "calculator.rb"
+# interface.rb
 
-p "Hello welcome, do you want to calculate something (yes/no)"
-calculator = gets.chomp
-until calculator == "n" || calculator == "no"
-  p "Enter a first number"
-  answer_one = gets.chomp.to_i
-  p "Enter a second number"
-  answer_two = gets.chomp.to_i
-  p "Which operation [+][-][x][/]"
-  answer_operation = gets.chomp
-    until answer_operation == "+" || answer_operation == "-"||answer_operation == "x"||answer_operation == "/"
-      p "Choose a correct operation [+][-][x][/]"
-      answer_operation = gets.chomp
-    end
-      calculate(answer_one, answer_two, answer_operation)
-p "Do you want to calculate something more (yes/no)"
-    calculator = gets.chomp
-end
-p "okay see ya"
+# Pseudo-code:
+#  Print welcome
+#  make array with horses
+#  Get horses
+#  Get user's bet
+#  store users bet
+#  Run the race with random
+#  Print results
+horses = ["blacky", "jacky", "sacky", "macky"]
 
-
-
-# p calculate(calculator)
-
-
-# First handling only additions
-
-# pseudo code
-
-# say hello
-# get first number
-# get second number
-# get operation
-# do the counting
-# return result
-
+p "Hey gambler, you wanna take a bet (y/n)?"
+start_answer = gets.chomp
+until start_answer == "n"
+  p "These are the horses#{horses.each_with_index}"
