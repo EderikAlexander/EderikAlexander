@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+  <div class="articles col-xs-12 col-sm-8 col-sm-offset-2 " style="display: block;">
+      <ul class="list-unstyled">
+        <% @articles.each do |article| %>
+        <li >
+          <h2> <%= link_to article.title, article_path(article) %> </h2>
+          <p> <%= article.content %></p>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
